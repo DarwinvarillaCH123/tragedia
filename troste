@@ -1,0 +1,49 @@
+
+motos = 0
+autos = 0
+bicicletas = 0
+patinetas = 0
+def mostrar_estado():
+    print("Estado actual del parqueadero:")
+    print(f"Motos: {motos}")
+    print(f"Autos: {autos}")
+    print(f"Bicicletas: {bicicletas}")
+    print(f"Patinetas: {patinetas}")
+    print()
+
+
+while True:
+   
+    mostrar_estado()
+    
+    accion = input("¿Desea ingresar (1) o sacar (2) un vehículo? (Ingrese 's' para salir): ")
+    
+    if accion == 's':
+        break 
+    
+    categoria = input("Ingrese la categoría del vehículo (1:moto, 2:auto, 3:bicicleta o 4:patineta): ")
+
+    if accion == '1':
+        if categoria == '1':
+            motos += 1
+        elif categoria == '2':
+            autos += 1
+        elif categoria == '3':
+            bicicletas += 1
+        elif categoria == '4':
+            patinetas += 1
+        else:
+            print("baja de la luna.")
+    elif accion == '2':
+        if categoria == '1' and motos > 0:
+            motos -= 1
+        elif categoria == '2' and autos > 0:
+            autos -= 1
+        elif categoria == '3' and bicicletas > 0:
+            bicicletas -= 1
+        elif categoria == '4' and patinetas > 0:
+            patinetas -= 1
+        else:
+            print("no somos tan ricos.")
+    else:
+        print("algo valido tonto.")
