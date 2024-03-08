@@ -1,0 +1,58 @@
+controlBln = True
+cantidad_motos = 0
+cantidad_autos = 0
+cantidad_bcicletas = 0
+cantidad_patinetas = 0
+inventario = input('bienvenido, presiona la tecla  para acceder al inventario:->')
+if inventario == 'a':
+ while controlBln == True:
+  print('<<<<INVENTARIO DEL ALMACEN>>>>\n1.motos\n2.autos\n3.bicicletas\n4.patinetas')
+  accion = input('selecciona la accion que deseas realizar\n5.ingresar\n6.sacar\n7.salir\n.->')
+  if accion == '5':
+      vehiculo = input('que tipo de vehiculo desea ingresar?\n1.Moto\n2.Auto\n3.Bicicleta\n4.Patina\n.->')
+      if vehiculo == '1':
+          cantidad = int(input('cuantas motos desea ingresar\n.->'))
+          cantidad_motos += cantidad
+      elif vehiculo == '2':
+          cantidad = int(input('cuantos autos  desea ingresar\n.->')) 
+          cantidad_autos += 1
+      elif vehiculo == '2':
+            cantidad = int(input('cuantas bicicletas desea ingresar\n.->')) 
+            cantidad_bcicletas += 1
+      elif vehiculo == '2':
+            cantidad = int(input('cuantas patinetas  desea ingresar\n.->')) 
+            cantidad_patinetas += 1
+      elif accion == '7':     
+            print('cantidades ingresadas')
+            print('cantidad de motos',cantidad_motos)
+            print('cantidad de autos',cantidad_autos)
+            print('cantidad de bicicletas',cantidad_bcicletas)
+            print('cantidad de patinetas',cantidad_patinetas)
+            print('listo mero')
+            break       
+            
+  else:
+     
+      if accion == '6':
+        while controlBln == True:
+          vehiculo = input('que tipo de vehiculo desea sacar?\n1.Moto\n2.Auto\n3.Bicicleta\n4.Patina\n.->')
+          if vehiculo == '1':
+              cantidad = int(input('cuantas motos desea sacar\n.->'))
+              cantidad_motos -= cantidad
+          elif vehiculo == '2':
+              cantidad = int(input('cuantos autos  desea sacar\n.->')) 
+              cantidad_autos -= 1
+          elif vehiculo == '3':
+                cantidad = int(input('cuantas bicicletas desea sacar\n.->')) 
+                cantidad_bcicletas -= 1
+          elif vehiculo == '4':
+              cantidad = int(input('cuantas patinetas desea sacar\n.->')) 
+              cantidad_patinetas -= 1
+      elif accion == '7':
+             print('Cantidades eliminadas')
+             print('cantidad de motos',cantidad_motos)
+             print('cantidad de autos',cantidad_autos)
+             print('cantidad de bicicletas',cantidad_bcicletas)
+             print('cantidad de patinetas',cantidad_patinetas)
+             print('listo mero')
+             break
